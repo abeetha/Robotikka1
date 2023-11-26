@@ -1,0 +1,31 @@
+<br>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Display Name</th>
+    <th>Unit Price</th>
+    <th>Selling Price</th>
+    <th>QTY</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let temp of data">
+    <td>{{temp?.propertyId}}</td>
+    <td>{{temp?.displayName}}</td>
+    <td>{{temp?.unitPrice}}</td>
+    <td>{{temp?.sellingPrice}}</td>
+    <td>{{temp?.qty}}</td>
+  </tr>
+  </tbody>
+  <tfoot>
+  @developers Stack
+  </tfoot>
+</table>
+<br>
+<mat-paginator [length]="dataLength"
+               [pageSize]="size"
+               [pageSizeOptions]="pageOptions"
+               (page)="pageEvent= getServerData($event)"
+               aria-label="Select page">
+</mat-paginator>

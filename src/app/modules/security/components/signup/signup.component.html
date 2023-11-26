@@ -1,0 +1,31 @@
+<div class="main-outer">
+  <div class="inner">
+    <h2 class="header-text">Register here!</h2>
+    <hr>
+    <form class="security-form" [formGroup]="registerForm">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input formControlName="firstName" type="text" matInput placeholder="Ex. hasika">
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input formControlName="lastName" type="text" matInput placeholder="Ex. Sandaruwan">
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Contact</mat-label>
+        <input formControlName="contact" type="tel" matInput placeholder="Ex. 011">
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" type="email" matInput placeholder="Ex. pat@example.com">
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>password</mat-label>
+        <input formControlName="password" type="password" matInput>
+      </mat-form-field>
+      <button type="button" [disabled]="registerForm.invalid" mat-raised-button color="primary" (click)="signup()">Register Now</button>
+      <p style="text-align: center; margin-top: 10px">OR</p>
+      <button type="button" mat-raised-button color="warn" routerLink="/security/login" style="position:relative; z-index: 1!important;">Already have an Account</button>
+    </form>
+  </div>
+</div>
